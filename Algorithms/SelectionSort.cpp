@@ -13,7 +13,7 @@ template <typename T>
 void Algorithms::SelectionSort(vector<T> &vec)
 {
     // Could do vec.size()-1 because single element is also min element.
-    for (int i = 0; i < vec.size()-1; i++)
+    for (int i = 0; i < vec.size() - 1; i++)
     {
         int minIndex = i;
         for (int j = i + 1; j < vec.size(); j++)

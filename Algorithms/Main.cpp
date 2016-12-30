@@ -15,12 +15,16 @@ int main()
     vector<char> testCharVector(testCharArray, testCharArray + sizeof(testCharArray) / sizeof(testCharArray[0]));
 
     Utils::PrintVector<int>(testVector);
-    Algorithms::SelectionSort<int>(testVector);
+    //Algorithms::SelectionSort<int>(testVector);
+    Algorithms::QuickSort<int>(testVector);
     Utils::PrintVector<int>(testVector);
 
     Utils::PrintVector<char>(testCharVector);
-    Algorithms::SelectionSort<char>(testCharVector);
+    //Algorithms::SelectionSort<char>(testCharVector);
+    Algorithms::QuickSort<char>(testCharVector);
     Utils::PrintVector<char>(testCharVector);
-    
+
+    int i;
+    cin >> i ;
     return 0;
 }

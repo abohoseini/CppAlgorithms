@@ -25,6 +25,6 @@ void Utils::Swap(T &a, T &b)
 
 // Explicit template instantiation
 template void Utils::PrintVector<int>(vector<int>);
-template void Utils::Swap<int>(int &, int &);
 template void Utils::PrintVector<char>(vector<char>);
+template void Utils::Swap<int>(int &, int &);
 template void Utils::Swap<char>(char &, char &);

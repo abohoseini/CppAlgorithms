@@ -9,6 +9,8 @@ class Algorithms
 
   template <typename T>
   static void SelectionSort(std::vector<T>& vec);
+  template <typename T>
+  static void QuickSort(std::vector<T>& vec);
 };
 
 #endif // ALGORITHMS_H
