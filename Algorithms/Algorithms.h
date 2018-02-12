@@ -6,11 +6,12 @@
 class Algorithms
 {
   public:
-
   template <typename T>
   static void SelectionSort(std::vector<T>& vec);
   template <typename T>
   static void QuickSort(std::vector<T>& vec);
+  template <typename T>
+  static int BinarySearch(std::vector<T>& vec, T x);
 };
 
 #endif // ALGORITHMS_H

@@ -16,7 +16,6 @@
 // always choosing the last element in the partition as the pivot in this way results in 
 // poor performance (O(n²)) on already sorted arrays, or arrays of identical elements.
 
-
 #include "Algorithms.h"
 #include "Utils.h"
 

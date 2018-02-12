@@ -18,11 +18,13 @@ int main()
     //Algorithms::SelectionSort<int>(testVector);
     Algorithms::QuickSort<int>(testVector);
     Utils::PrintVector<int>(testVector);
-
+    cout << "Location of 8 is: " << Algorithms::BinarySearch(testVector, 8) << endl;
+    
     Utils::PrintVector<char>(testCharVector);
     //Algorithms::SelectionSort<char>(testCharVector);
     Algorithms::QuickSort<char>(testCharVector);
     Utils::PrintVector<char>(testCharVector);
+    cout << "Location of 'd' is: " << Algorithms::BinarySearch(testCharVector, 'd') << endl;
 
     int i;
     cin >> i ;
