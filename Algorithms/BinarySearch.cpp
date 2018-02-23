@@ -10,7 +10,7 @@
 using namespace std;
 
 template<typename T>
-int binarySearch(vector<T> &vec, T x, int begin, int end)
+int binarySearchRec(vector<T> &vec, T x, int begin, int end)
 {
     int mid = begin + (end - begin) / 2;
 
@@ -23,22 +23,52 @@ int binarySearch(vector<T> &vec, T x, int begin, int end)
 
         if (vec[mid] < x)
         {
-            return binarySearch(vec, x, mid + 1, end);
+            return binarySearchRec(vec, x, mid + 1, end);
         }
 
-        return binarySearch(vec, x, begin, mid - 1);
+        return binarySearchRec(vec, x, begin, mid - 1);
     }
 
     return -1;
 }
 
 template<typename T>
+int Algorithms::BinarySearchRec(vector<T> &vec, T x)
+{
+    return binarySearchRec(vec, x, 0, vec.size() - 1);
+}
+
+template<typename T>
 int Algorithms::BinarySearch(vector<T> &vec, T x)
 {
-    return binarySearch(vec, x, 0, vec.size() - 1);
+	int begin = 0;
+	int end = vec.size()-1;
+
+	while (begin <= end)
+	{
+		int mid = (end - begin) / 2;
+		if (vec[mid] == x)
+		{
+			return mid;
+		}
+
+		if (vec[mid] < x)
+		{
+			begin = mid+1;
+		}
+		else
+		{
+			end = mid-1;
+		}
+	}
+
+	return -1;
 }
+
+// Explicit template instantiation
+template int Algorithms::BinarySearchRec<int>(vector<int> &, int);
+template int Algorithms::BinarySearchRec<char>(vector<char> &, char);
 
 // Explicit template instantiation
 template int Algorithms::BinarySearch<int>(vector<int> &, int);
 template int Algorithms::BinarySearch<char>(vector<char> &, char);
-

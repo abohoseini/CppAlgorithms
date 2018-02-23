@@ -11,6 +11,8 @@ class Algorithms
   template <typename T>
   static void QuickSort(std::vector<T>& vec);
   template <typename T>
+  static int BinarySearchRec(std::vector<T>& vec, T x);
+  template <typename T>
   static int BinarySearch(std::vector<T>& vec, T x);
 };
 
