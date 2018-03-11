@@ -25,10 +25,8 @@ int binarySearchRec(vector<T> &vec, T x, int begin, int end)
         {
             return binarySearchRec(vec, x, mid + 1, end);
         }
-
         return binarySearchRec(vec, x, begin, mid - 1);
     }
-
     return -1;
 }
 
@@ -61,7 +59,6 @@ int Algorithms::BinarySearch(vector<T> &vec, T x)
 			end = mid-1;
 		}
 	}
-
 	return -1;
 }
 
